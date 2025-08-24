@@ -1,0 +1,32 @@
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game.CoreGui
+
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(0, 200, 0, 40)
+button.Position = UDim2.new(0.5, - 100, 0, 20)
+button.Text = "Modo Bypass Ativado fazercash"
+button.TextSize = 18
+button.BackgroundTransparency = 1
+button.TextScaled = true
+local gradient = Instance.new("UIGradient")
+gradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(7, 0, 0)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(7, 0, 0))
+}
+gradient.Parent = button
+
+button.TextColor3 = Color3.fromRGB(255, 255, 255)
+button.Parent = screenGui
+button.MouseButton1Click:Connect(function()
+    local voiceChatService = game:GetService("VoiceChatService")
+    if voiceChatService then
+        voiceChatService:joinVoice()
+        local message = Instance.new("Message")
+        message.Text = "VC Suspension Bypassed"
+        message.Parent = workspace
+        wait(3)
+        message:Destroy()
+    else
+        warn("VoiceChatService is not available.")
+    end
+end)

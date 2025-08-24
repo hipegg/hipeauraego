@@ -4,7 +4,7 @@ screenGui.Parent = game.CoreGui
 local button = Instance.new("TextButton")
 button.Size = UDim2.new(0, 200, 0, 40)
 button.Position = UDim2.new(0.5, - 100, 0, 20)
-button.Text = "Modo Bypass Ativado fazercash"
+button.Text = "Modo Bypass Ativado hipe/nz4"
 button.TextSize = 18
 button.BackgroundTransparency = 1
 button.TextScaled = true
@@ -22,7 +22,7 @@ button.MouseButton1Click:Connect(function()
     if voiceChatService then
         voiceChatService:joinVoice()
         local message = Instance.new("Message")
-        message.Text = "VC Suspension Bypassed"
+        message.Text = "UNBAN DO HIPE"
         message.Parent = workspace
         wait(3)
         message:Destroy()
